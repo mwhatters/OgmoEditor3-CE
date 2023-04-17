@@ -1,0 +1,14 @@
+{
+	"name": "electron",
+	"url": "https://github.com/tong/hxelectron",
+	"license": "MIT",
+	"classPath": "src",
+	"tags": ["electron","node","desktop","web","javascript","nodejs","application"],
+	"description": "Type definitions for the electron framework",
+	"releasenote": "See CHANGELOG",
+	"version": "12.0.4",
+	"contributors": ["tong","fponticelli"],
+	"dependencies": {
+		"hxnodejs": ""
+	}
+}
