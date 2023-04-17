@@ -1,0 +1,11 @@
+{
+  "name": "haxe-loader",
+  "url": "https://github.com/jasononeil/webpack-haxe-loader",
+  "license": "MIT",
+  "classPath": "haxelib/",
+  "tags": ["webpack", "js"],
+  "description": "Webpack loader for the Haxe programming language. Allows you to use Webpack to build Haxe projects, and to use Webpack loaded assets in your Haxe code",
+  "version": "0.9.0",
+  "releasenote": "See RELEASES.md",
+  "contributors": ["jason", "elsassph"]
+}

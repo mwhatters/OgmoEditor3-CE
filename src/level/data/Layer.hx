@@ -76,14 +76,14 @@ class Layer
 	}
 
 	public function levelToIntegerPos(pos: Vector, ?into: Vector):Vector
-    {
-      if (into == null) into = new Vector();
-  
-      into.x = Math.floor((pos.x - offset.x));
-      into.y = Math.floor((pos.y - offset.y));
-  
-      return into;
-    }
+	{
+		if (into == null) into = new Vector();
+
+		into.x = Math.floor((pos.x - offset.x));
+		into.y = Math.floor((pos.y - offset.y));
+
+		return into;
+	}
 
 	public function gridToLevel(pos: Vector, ?into: Vector):Vector
 	{
@@ -95,16 +95,15 @@ class Layer
 		return into;
 	}
 
-  public function gridToInt(pos: Vector, ?into: Vector):Vector
-    {
-      if (into == null) into = new Vector();
-  
-      into.x = pos.x + offset.x;
-      into.y = pos.y + offset.y;
-  
-      return into;
-    }
-  
+	public function gridToInt(pos: Vector, ?into: Vector):Vector
+	{
+		if (into == null) into = new Vector();
+
+		into.x = pos.x + offset.x;
+		into.y = pos.y + offset.y;
+
+		return into;
+	}
 
 	public function snapToGrid(pos: Vector, ?into: Vector):Vector
 	{
@@ -116,15 +115,15 @@ class Layer
 		return into;
 	}
 
-  public function snapToInt(pos: Vector, ?into: Vector):Vector
-    {
-      if (into == null) into = new Vector();
-  
-      levelToIntegerPos(pos, into);
-      gridToInt(into, into);
-  
-      return into;
-    }
+	public function snapToInt(pos: Vector, ?into: Vector):Vector
+	{
+		if (into == null) into = new Vector();
+		
+		levelToIntegerPos(pos, into);
+		gridToInt(into, into);
+
+		return into;
+	}
 
 	public function getGridCellsX(width:Float):Int
 	{

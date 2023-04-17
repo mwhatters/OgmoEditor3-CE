@@ -59,7 +59,7 @@ class Ogmo
 
 		version = untyped Remote.app.getVersion();
 
-		Webpack.require('./assets/styles/core.scss');
+		Webpack.require('./assets/styles/core.css');
 
 		new JQuery(function () { onReady(); });
 	}
@@ -98,7 +98,7 @@ class Ogmo
 				case Keys.Y:
 					if (ogmo.ctrl) e.preventDefault();
 				case Keys.Tab:
-					if (popupMode || editor.active) e.preventDefault();
+					if (popupMode) e.preventDefault();
 			}
 		});
 
