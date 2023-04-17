@@ -13,6 +13,7 @@
         "dev": "webpack --config=webpack.app.config.js --mode=development && webpack-dev-server --config=webpack.ogmo.config.js --mode=development --host 0.0.0.0",
         "icons": "electron-icon-maker --input=./assets/gfx/icon.png --output=./assets/build",
         "dist": "electron-builder --config electron-builder.json",
+        "distw": "electron-builder --config electron-builder.json --win",
         "release": "electron-builder --config electron-builder.json -mwl --publish=never"
     },
     "devDependencies": {

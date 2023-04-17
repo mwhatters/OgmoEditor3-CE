@@ -1,5 +1,5 @@
 {
-  "productName": "Ogmo Editor",
+  "productName": "Ogmo Editor (Plus)",
   "directories": {
     "app": "bin"  
   },
@@ -7,5 +7,15 @@
     "ext": "ogmo",
     "name": "OGMO Project",
     "role": "Editor"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      }
+    ]
   }
 }
