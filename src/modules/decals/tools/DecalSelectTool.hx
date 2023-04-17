@@ -184,10 +184,10 @@ class DecalSelectTool extends DecalTool
 			else
 				mode = None;
 		}
-		else if (OGMO.ctrl)
-		{
-			layerEditor.toggleSelected(hit);
-		}
+		// else if (OGMO.ctrl)
+		// {
+		// 	layerEditor.toggleSelected(hit);
+		// }
 		else if (layerEditor.selectedContainsAny(hit))
 		{
 			startMove();
@@ -206,7 +206,12 @@ class DecalSelectTool extends DecalTool
 	{
 		mode = Move;
 		firstChange = false;
-		layer.snapToGrid(start, start);
+		trace(OGMO.ctrl);
+		if (!OGMO.ctrl) {
+      layer.snapToGrid(start, start);
+    } else {
+      layer.snapToInt(start, start);
+    }
 		decals = layerEditor.selected;
 	}
 
@@ -254,8 +259,11 @@ class DecalSelectTool extends DecalTool
 		}
 		else if (mode == Move)
 		{
-			if (!OGMO.ctrl)
-				layer.snapToGrid(pos, pos);
+			if (!OGMO.ctrl) {
+        layer.snapToGrid(pos, pos);
+      } else {
+        layer.snapToInt(pos, pos);
+      }
 
 			if (!pos.equals(start))
 			{
