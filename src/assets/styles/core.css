@@ -704,6 +704,7 @@ textarea, input, button, select {
 }
 .editor_panel-right {
   width: 240px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   overflow-x: auto;
@@ -871,6 +872,7 @@ textarea, input, button, select {
   width: 100%;
   min-width: 180px;
   height: 50%;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   overflow: hidden;

@@ -162,7 +162,7 @@ class Editor
 				if (EDITOR.level != null)
 					EDITOR.onMouseMove(EDITOR.getEventPosition(e));
 				if (EDITOR.resizingPalette)
-					new JQuery(".editor_palette").height(e.pageY);
+					new JQuery(".editor_palette").height(Math.max(e.pageY, 250));
 				if (EDITOR.resizingLayers)
 					new JQuery(".editor_layers").height(e.pageY);
 				if (EDITOR.resizingLeft && e.pageX != null)
