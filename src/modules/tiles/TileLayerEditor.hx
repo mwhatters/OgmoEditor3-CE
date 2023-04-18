@@ -20,7 +20,9 @@ class TileLayerEditor extends LayerEditor
 		{
 			var l:TileLayer = cast layer;
 			var tile = l.data[x][y];
-			if (!tile.isEmptyTile()) EDITOR.draw.drawTile(x * l.template.gridSize.x, y * layer.template.gridSize.y, l.tileset, tile);
+			if (tile != null && !tile.isEmptyTile()) {
+				EDITOR.draw.drawTile(x * l.template.gridSize.x, y * layer.template.gridSize.y, l.tileset, tile);
+			}
 		}
 	}
 	
