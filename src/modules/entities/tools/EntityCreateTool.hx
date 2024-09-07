@@ -24,7 +24,11 @@ class EntityCreateTool extends EntityTool
 		deleting = false;
 
 		if (layerEditor.brushTemplate == null) return;
-		if (!OGMO.ctrl) layer.snapToGrid(pos, pos);
+		if (!OGMO.ctrl) {
+			layer.snapToGrid(pos, pos);
+		} else {
+			layer.snapToInt(pos, pos);
+		}
 
 		EDITOR.level.store("create entity");
 		EDITOR.locked = true;
@@ -93,7 +97,11 @@ class EntityCreateTool extends EntityTool
 		}
 		else if (layerEditor.brushTemplate != null && !pos.equals(previewAt))
 		{
-			if (!OGMO.ctrl) layer.snapToGrid(pos, pos);
+			if (!OGMO.ctrl) {
+				layer.snapToGrid(pos, pos);
+			} else {
+				layer.snapToInt(pos, pos);
+			}
 
 			canPreview = true;
 			previewAt = pos;
