@@ -24,7 +24,7 @@ haxelib install haxe-loader
 
 ## Build
 ```
-npm i
+npm install --legacy-peer-deps
 npm run build
 ```
 This builds the App and puts it in the `bin` directory. You can then start the app by running `npm start`, or by starting electron in the directory.
@@ -40,7 +40,7 @@ NOTES:
 
 ## Packaging
 ```
-npm i
+npm install --legacy-peer-deps
 npm run build
 npm run dist
 ```
