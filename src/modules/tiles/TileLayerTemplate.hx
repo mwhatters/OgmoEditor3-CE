@@ -27,6 +27,9 @@ class TileLayerTemplate extends LayerTemplate
 	public var exportMode:Int = TileExportModes.IDS;
 	public var arrayMode:Int = ArrayExportModes.ONE;
 	public var defaultTileset:String = null;
+	public var solid:Bool = false;
+	public var renderLayer:String = "";
+	public var zIndex:Int = 0;
 
 	override function createEditor(id:Int): LayerEditor
 	{
@@ -46,6 +49,9 @@ class TileLayerTemplate extends LayerTemplate
 		data.arrayMode = arrayMode;
 		if (defaultTileset != null) data.defaultTileset = defaultTileset;
 		else data.defaultTileset = "";
+		data.solid = solid;
+		data.renderLayer = renderLayer;
+		data.zIndex = zIndex;
 
 		return data;
 	}
@@ -57,6 +63,9 @@ class TileLayerTemplate extends LayerTemplate
 		exportMode = Imports.integer(data.exportMode, TileExportModes.IDS);
 		arrayMode = Imports.integer(data.arrayMode, ArrayExportModes.ONE);
 		defaultTileset = data.defaultTileset;
+		solid = Imports.bool(data.solid, false);
+		renderLayer = Imports.string(data.renderLayer, "");
+		zIndex = Imports.integer(data.zIndex, 0);
 
 		return this;
 	}

@@ -246,6 +246,9 @@ class TileLayer extends Layer
 
 		data.exportMode = template.exportMode;
 		data.arrayMode = template.arrayMode;
+		data.solid = template.solid;
+		data.renderLayer = template.renderLayer;
+		data.zIndex = template.zIndex;
 
 		return data;
 	}
