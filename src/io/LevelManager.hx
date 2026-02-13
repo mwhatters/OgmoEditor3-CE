@@ -250,20 +250,11 @@ class LevelManager
 
 	function resolveModifiedLevel():Void
 	{
-		Popup.open("Level File Modified", "warning", "<span class='monospace'>" + EDITOR.level.displayNameNoStar + "</span> was modified externally!", ["Reload", "Keep Mine"], function (i)
-		{
-			if (i == 0)
-			{
-				Imports.levelInto(EDITOR.level.path, EDITOR.level);
-				EDITOR.level.unsavedChanges = false;
-				EDITOR.dirty();
-			}
-			else
-				EDITOR.level.unsavedChanges = true;
-
-			EDITOR.levelsPanel.refreshLabelsAndIcons();
-			OGMO.updateWindowTitle();
-		});
+		Imports.levelInto(EDITOR.level.path, EDITOR.level);
+		EDITOR.level.unsavedChanges = false;
+		EDITOR.dirty();
+		EDITOR.levelsPanel.refreshLabelsAndIcons();
+		OGMO.updateWindowTitle();
 	}
 
 	public function onGainFocus():Void
