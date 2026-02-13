@@ -67,7 +67,7 @@ package electron.remote;
 	**/
 	function getUploadProgress():Any;
 }
-@:enum abstract ClientRequestEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
+enum abstract ClientRequestEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
 	var response : electron.remote.ClientRequestEvent<Void -> Void> = "response";
 	/**
 		Emitted when an authenticating proxy is asking for user credentials.

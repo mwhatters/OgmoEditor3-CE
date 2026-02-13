@@ -28,6 +28,6 @@ package electron.main;
 	**/
 	function getSwitchValue(switch_:String):String;
 }
-@:enum abstract CommandLineEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
+enum abstract CommandLineEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
 
 }

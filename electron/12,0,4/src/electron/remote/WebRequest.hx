@@ -70,6 +70,6 @@ package electron.remote;
 	**/
 	var urls : Array<String>; }, listener:haxe.extern.EitherType<Dynamic, Dynamic>):Void;
 }
-@:enum abstract WebRequestEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
+enum abstract WebRequestEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
 
 }

@@ -281,6 +281,6 @@ package electron.remote;
 	**/
 	var message : String; }):js.lib.Promise<Any>;
 }
-@:enum abstract DialogEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
+enum abstract DialogEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
 
 }

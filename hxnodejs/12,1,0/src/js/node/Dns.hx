@@ -32,7 +32,7 @@ import js.Error;
 /**
 	Enumeration of possible Int `options` values for `Dns.lookup`.
 **/
-@:enum abstract DnsAddressFamily(Int) from Int to Int {
+enum abstract DnsAddressFamily(Int) from Int to Int {
 	var IPv4 = 4;
 	var IPv6 = 6;
 }
@@ -63,7 +63,7 @@ typedef DnsLookupOptions = {
 /**
 	Enumeration of possible `rrtype` value for `Dns.resolve`.
 **/
-@:enum abstract DnsRrtype(String) from String to String {
+enum abstract DnsRrtype(String) from String to String {
 	/**
 		IPV4 addresses, default
 	**/
@@ -133,7 +133,7 @@ extern class DnsError extends Error {
 	Each DNS query can return one of the following error codes
 **/
 @:jsRequire("dns")
-@:enum extern abstract DnsErrorCode(String) {
+enum extern abstract DnsErrorCode(String) {
 	/**
 		DNS server returned answer with no data.
 	**/

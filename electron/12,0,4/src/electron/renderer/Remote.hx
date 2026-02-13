@@ -128,6 +128,6 @@ package electron.renderer;
 	**/
 	static function getGlobal(name:String):Any;
 }
-@:enum abstract RemoteEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
+enum abstract RemoteEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
 
 }

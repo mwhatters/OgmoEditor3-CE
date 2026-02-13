@@ -20,6 +20,6 @@ package electron.remote;
 	**/
 	function closePopup(?browserWindow:electron.remote.BrowserWindow):Void;
 }
-@:enum abstract ShareMenuEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
+enum abstract ShareMenuEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
 
 }

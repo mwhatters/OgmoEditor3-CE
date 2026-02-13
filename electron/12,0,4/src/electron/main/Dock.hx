@@ -54,6 +54,6 @@ package electron.main;
 	**/
 	function setIcon(image:haxe.extern.EitherType<Dynamic, Dynamic>):Void;
 }
-@:enum abstract DockEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
+enum abstract DockEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
 
 }

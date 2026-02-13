@@ -384,7 +384,7 @@ package electron.remote;
 	**/
 	function getAllExtensions():Array<electron.Extension>;
 }
-@:enum abstract SessionEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
+enum abstract SessionEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
 	/**
 		Emitted when Electron is about to download `item` in `webContents`.
 		

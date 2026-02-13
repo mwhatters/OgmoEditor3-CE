@@ -61,7 +61,7 @@ package electron.remote;
 	**/
 	static function quitAndInstall():Void;
 }
-@:enum abstract AutoUpdaterEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
+enum abstract AutoUpdaterEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
 	/**
 		Emitted when there is an error while updating.
 	**/

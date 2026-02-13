@@ -1,4 +1,5 @@
 const { spawn } = require('child_process');
+const webpack = require('webpack');
 
 module.exports = (env, argv) => {
   const buildMode = argv.mode || 'development';
@@ -40,6 +41,9 @@ module.exports = (env, argv) => {
         }
       ]
     },
+    plugins: [
+      new webpack.IgnorePlugin(/^spawn-sync$/)
+    ],
     devtool: 'source-map',
     devServer: {
       contentBase: dist,

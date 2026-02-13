@@ -1,6 +1,6 @@
 package util;
 
-@:enum
+enum
 abstract Keys(Int) from Int to Int
 {
 		var MouseLeft:Int = 1;

@@ -508,7 +508,7 @@ private class Gen {
 			#end
 		case 'String','string':
 			if( possibleValues != null ) {
-				//TODO create abstract @:enum
+				//TODO create abstract enum
 			}
 			macro: String;
 		case 'ReadableStream':
@@ -584,14 +584,14 @@ private class Gen {
 
 #end
 
-@:enum abstract ItemType(String) from String to String {
+enum abstract ItemType(String) from String to String {
 	var Module = "Module";
 	var Class_ = "Class";
 	var Structure = "Structure";
 	var Element = "Element";
 }
 
-@:enum abstract Platform(String) from String to String {
+enum abstract Platform(String) from String to String {
 	var MacOS = "macOS";
 	var Windows = "Windows";
 	var Linux = "Linux";

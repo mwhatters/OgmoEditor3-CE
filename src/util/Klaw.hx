@@ -10,7 +10,7 @@ typedef Item =
 	stats:Stats
 }
 
-@:enum
+enum
 abstract QueueMethod (String) from String to String
 {
 	var SHIFT = 'shift';

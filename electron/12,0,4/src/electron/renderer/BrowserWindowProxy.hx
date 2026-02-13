@@ -34,6 +34,6 @@ package electron.renderer;
 	**/
 	function postMessage(message:Any, targetOrigin:String):Void;
 }
-@:enum abstract BrowserWindowProxyEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
+enum abstract BrowserWindowProxyEvent<T:(haxe.Constraints.Function)>(js.node.events.EventEmitter.Event<T>) to js.node.events.EventEmitter.Event<T> {
 
 }

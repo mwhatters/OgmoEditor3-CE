@@ -3,11 +3,46 @@
 </p>
 
 ### Open Source 2D level editor written in Haxe!
+
+> **Note:** This is a fork of [Ogmo Editor 3 - Community Edition](https://github.com/Ogmo-Editor-3/OgmoEditor3-CE) with updated instructions.
+
+## Quick Start
+```
+nvm use 16
+
+haxelib setup
+haxelib install electron 12.0.4
+haxelib install jQueryExtern (I'm using 3.3.0)
+haxelib install haxe-loader (I'm using v1.1.1)
+
+npm install --legacy-peer-deps
+
+-- to develop
+npm run dev
+
+-- build the app
+npm run build
+
+
+-- create desktop application
+-- for macOs
+npm run dist
+
+-- for macOs (Intel) (Unverified)
+npm run distintel
+
+
+-- for windows (Unverified)
+npm rund distw
+
+Use the application, it's a much better experience than dev
+```
+
 For more information, check out the [Ogmo 3 homepage](https://ogmo-editor-3.github.io/). Or just go straight to the [downloads page](https://ogmoeditor.itch.io/editor)! If you need a build for 32 bit Windows, @vontoGH has graciously made them [available here](https://github.com/vontoGH/OgmoEditor3-CE/releases)!
 
 # Getting Started
 
-This project requires Haxe v4.0.0 or later, Node v10+, and various dependencies for each of them.
+This project requires Haxe v4.0.0 or later, Node v16, and various dependencies for each of them.
 
 ### Node
 * Install [Node](https://nodejs.org/)
@@ -18,8 +53,8 @@ This project requires Haxe v4.0.0 or later, Node v10+, and various dependencies 
 ```
 haxelib setup
 haxelib install electron 12.0.4
-haxelib install jQueryExtern
-haxelib install haxe-loader
+haxelib install jQueryExtern (I'm using 3.3.0)
+haxelib install haxe-loader (I'm using v1.1.1)
 ```
 
 ## Build
@@ -30,13 +65,9 @@ npm run build
 This builds the App and puts it in the `bin` directory. You can then start the app by running `npm start`, or by starting electron in the directory.
 
 ## Development
-Speed up development by using Webpack's dev server! Running `npm run dev` builds the app, starts a server that will watch for changes in the project, then starts electron. If changes are found, Webpack will rebuild the source and refresh the app. If there are errors, they will show up in the app's DevTools.
-
-While running the dev server, all code that is within `#if debug` conditionals are added in.
-
-NOTES: 
-  * Changes to `App.hx` are not watched, and the app will need to manually be rebuilt if changes are made there.
-  * The app will need to be rebuilt normally (`npm run build`) in order to run it again after using the dev server.
+```
+npm run dev
+```
 
 ## Packaging
 ```
